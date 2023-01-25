@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(to right, rgb(7, 28, 121), rgb(3, 3, 61));
+}
+.main-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: rgb(5, 6, 26); */
+}
+/* nav bar style------------------------------------------ */
+.nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(7, 5, 109);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-first-part {
+  width: 50%;
+  height: 90%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+}
+.nav-fav-part h3 {
+  color: white;
+  text-shadow: var(--shadow-color);
+}
+@keyframes logo-image-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nav-first-part img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid rgb(12, 5, 53);
+  box-shadow: 3px 2px 4px rgb(124, 101, 250);
+  background-size: cover;
+  overflow: hidden;
+  margin-left: 1rem;
+  animation-name: logo-image-rotation;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+.nav-heading-section {
+  margin-right: 100px;
+  color: white;
+  margin-left: 7px;
+  margin-top: 3px;
+  text-shadow: var(--shadow-color);
+}
+.search-bar {
+  width: 30%;
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgb(12, 12, 78);
+  border-radius: 15px;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-weight: 500;
+  text-align: center;
+}
+.search-ico,
+.mic-ico {
+  color: white;
+}
+.search-bar > div:nth-child(1) {
+  position: absolute;
+  width: min-content;
+  left: 5%;
+  top: 10%;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+  /* display: inline-block; */
+  position: absolute;
+  width: min-content;
+  right: 0%;
+  top: 10%;
+  color: white;
+  transition: all ease-in-out 2s;
+}
+input:focus {
+  outline: none;
+}
+@keyframes ringing_bell {
+  0% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+.notification-bell img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation-name: ringing_bell;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 10s;
+}
+/* profile picture of the user */
+.profile-picture img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.profile-picture:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: all ease-in-out 1s;
+}
+/* ------------------------------------------------------------ */
+.artist-aside-section-first {
+  width: 65%;
+  height: 100%;
+  overflow: scroll;
+  margin-left: 2rem;
+  /* border:1px solid white; */
+}
+.artist-aside-section-first::-webkit-scrollbar {
+  display: none;
+}
+.singer-card {
+  width: 90%;
+  height: auto;
+  box-sizing: border-box;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+}
+.singer-card img {
+  width: 45%;
+  height: auto;
+  background-size: cover;
+  padding-right: 1rem;
+}
+.about-artist {
+  width: 60%;
+}
+.about-artist p {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.name-folowers {
+  height: 40px;
+  width: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ------play all button and follow button--- */
+.play-follow-btn {
+  display: inline-block;
+  margin-top: 2rem;
+}
+.btn {
+  padding: 5px;
+}
+.btn:hover{
+  color:rgb(198, 198, 243);
+  border: 1px solid rgb(238, 228, 228);
+  box-shadow: 4px 4px 5px  inset grey;
+  background-color: rgb(8, 6, 116);
+  border-radius: 14px;
+}
+/* ---------------------------- */
+.playlist-section {
+  height: 70px;
+  width: 95%;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-top: 10px;
+  background-image: linear-gradient(to right, rgb(21, 37, 105), rgb(3, 3, 61));
+  box-shadow: 2px 3px 4px rgb(38, 19, 133);
+}
+.playlist-section:hover {
+  background-image: linear-gradient(to right, rgb(2, 15, 73), rgb(2, 2, 41));
+}
+.left-section {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* justify-content: space-evenly; */
+  width: 100%;
+  height: 100%;
+}
+
+.song-image {
+  width: 50px;
+  height: 100%;
+  margin-left: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+.song-image img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: 1px;
+  border-radius: 5px;
+  position: relative;
+}
+.play-button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  /* z-index: -1; */
+  opacity: 0;
+  background-size: cover;
+}
+.play-button a {
+  text-decoration: none;
+  color: white;
+}
+.song-image:hover .play-button {
+  /* z-index: 4; */
+  opacity: 0.8;
+  color: whitesmoke;
+}
+.song-name {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  margin-left: 5px;
+}
+.time-song {
+  margin-left: 3rem;
+}
+/* this is for heart icon  */
+.right-section {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.heart-icon a,
+.plus-icon a {
+  text-decoration: none;
+  color: white;
+}
+.heart-icon a:hover,
+.plus-icon a:hover {
+  color: rgb(121, 121, 226);
+}
+/* --this is for serial number ------ */
+.serial-number {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+/* .playlist-section:hover {
+  background-color: rgb(78, 48, 250);
+} */
+.play-button {
+  position: absolute;
+  z-index: 4;
+}
+/* -----------------aside second part ------------------- */
+.aside-section-second {
+  height: 100vh;
+  width: 35%;
+  /* border: 1px solid white; */
+}
+/* three dots for similar item box */
+.three-dot-similar-artist {
+  position: relative;
+}
+.three-dots {
+  color: white;
+  margin-top: 1.3rem;
+}
+/* three dots box content */
+.three-dot-similar-artist-box {
+  position: absolute;
+  right: 20px;
+  height: 100px;
+  width: 100px;
+  display: none;
+  background-color: rgb(19, 3, 90);
+  border: 1px solid white;
+}
+.drop-item {
+  color: white;
+  padding: 3px;
+  border: 1px solid rgb(22, 42, 155);
+  margin-left: 5px;
+  font-size: 10px;
+}
+.three-dot-simlar-artist:hover .three-dot-similar-artist-box {
+  display: block;
+}
